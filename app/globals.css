@@ -18,3 +18,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.class {
+  font-family: var(--font-poppins);
+}

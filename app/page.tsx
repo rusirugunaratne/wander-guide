@@ -1,7 +1,7 @@
 // pages/index.tsx
 
 import { Button, Stack, Typography } from "@mui/material";
-import logo from "../app/assets/logo.png";
+import logo from "../app/assets/animatedLogo.gif";
 import Image from "next/image";
 import AssistantDirectionIcon from "@mui/icons-material/AssistantDirection";
 import CollectionsBookmarkIcon from "@mui/icons-material/CollectionsBookmark";
@@ -19,7 +19,7 @@ export default function Home() {
           alignItems: "center",
         }}
       >
-        <Image src={logo} alt='logo' />
+        <Image src={logo} alt='logo' height={300} />
         <Typography variant='body1'>
           Discover beautiful travel destinations around the world.
         </Typography>

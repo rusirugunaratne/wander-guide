@@ -3,6 +3,8 @@
 
 import { useState } from "react";
 import { TextField, Button, Box, Typography } from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
+import { colors } from "../data/colors";
 
 const Contact = () => {
   // State for form fields
@@ -23,7 +25,17 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        maxWidth: 600,
+        margin: "0 auto",
+        padding: 2,
+      }}
+    >
       <Typography variant='h4' gutterBottom>
         Contact Us
       </Typography>
@@ -40,8 +52,7 @@ const Contact = () => {
           display: "flex",
           flexDirection: "column",
           gap: 2,
-          maxWidth: 600,
-          marginTop: 4,
+          width: "100%",
         }}
       >
         {/* Name Field */}
@@ -78,11 +89,22 @@ const Contact = () => {
         />
 
         {/* Submit Button */}
-        <Button type='submit' variant='contained' color='primary'>
+        <Button
+          type='submit'
+          sx={{
+            color: "black",
+            fontSize: "1rem",
+            "&:hover": {
+              color: colors.homeButton,
+            },
+            alignSelf: "center",
+          }}
+          endIcon={<SendIcon />}
+        >
           Send Message
         </Button>
       </Box>
-    </>
+    </Box>
   );
 };
 

@@ -1,19 +1,21 @@
 // components/Layout.tsx
 "use client";
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Container,
-  Button,
-  Box,
-} from "@mui/material";
+import { AppBar, Toolbar, Container, Button, Box } from "@mui/material";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-import logo from "../app/assets/logo.png";
+import logo from "../app/assets/animatedLogo.gif";
 import Image from "next/image";
 import { colors } from "./data/colors";
+
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -26,7 +28,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <html>
-        <body>
+        <body
+          className={poppins.className}
+          style={{
+            background: `
+              linear-gradient(to bottom, rgba(142, 202, 230, 0.3), rgba(33, 158, 188, 0.1), rgba(255, 183, 3, 0.3)),
+              url('/path/to/your/background-image.jpg')`, // Replace with your image path
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            minHeight: "100vh",
+            // paddingBottom: "60px", // Ensure content is not covered by the AppBar
+          }}
+        >
           <AppBar
             position='static'
             sx={{
@@ -45,24 +58,26 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               {/* Left-side links */}
               <Box
                 sx={{
-                  transition: "opacity 0.5s ease, transform 0.5s ease", // Apply transition to left links
+                  transition: "opacity 0.5s ease, transform 0.5s ease",
                   opacity: isHomePage ? 1 : 0.7,
                   transform: isHomePage ? "translateX(0)" : "translateX(-20px)",
                 }}
               >
-                <Link href='/' passHref>
-                  <Button
-                    sx={{
-                      color: "black",
-                      fontSize: "1rem",
-                      "&:hover": {
-                        color: colors.navLink, // Change to desired hover color
-                      },
-                    }}
-                  >
-                    Home
-                  </Button>
-                </Link>
+                {!isHomePage && (
+                  <Link href='/' passHref>
+                    <Button
+                      sx={{
+                        color: "black",
+                        fontSize: "1rem",
+                        "&:hover": {
+                          color: colors.navLink,
+                        },
+                      }}
+                    >
+                      Home
+                    </Button>
+                  </Link>
+                )}
                 <Link href='/destinations' passHref>
                   <Button
                     sx={{
@@ -85,9 +100,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   src={logo}
                   width={200}
                   style={{
-                    transition: "opacity 0.5s ease, transform 0.5s ease", // Transition for appearance/disappearance
-                    opacity: !isHomePage ? 1 : 0, // Fade in or out
-                    transform: !isHomePage ? "scale(1)" : "scale(0.9)", // Scale effect for transition
+                    transition: "opacity 0.5s ease, transform 0.5s ease",
+                    opacity: !isHomePage ? 1 : 0,
+                    transform: !isHomePage ? "scale(1)" : "scale(0.9)",
                   }}
                 />
               )}
@@ -95,7 +110,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               {/* Right-side links */}
               <Box
                 sx={{
-                  transition: "opacity 0.5s ease, transform 0.5s ease", // Apply transition to right links
+                  transition: "opacity 0.5s ease, transform 0.5s ease",
                   opacity: isHomePage ? 1 : 0.7,
                   transform: isHomePage ? "translateX(0)" : "translateX(20px)",
                 }}
