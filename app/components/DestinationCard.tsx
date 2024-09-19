@@ -1,5 +1,3 @@
-// components/DestinationCard.tsx
-
 import {
   Card,
   CardMedia,
@@ -22,8 +20,8 @@ const DestinationCard: React.FC<DestinationCardProps> = ({ destination }) => {
       sx={{
         transition: "transform 0.3s ease, box-shadow 0.3s ease",
         "&:hover": {
-          transform: "scale(1.05)", // Scale effect on hover
-          boxShadow: 5, // Use Material-UI's shadow
+          transform: "scale(1.05)",
+          boxShadow: 5,
         },
       }}
     >

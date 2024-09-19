@@ -1,5 +1,3 @@
-// data/images.ts
-
 export const imageData = [
   {
     img: "https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -25,5 +23,4 @@ export const imageData = [
     img: "https://images.unsplash.com/photo-1556276797-5086e6b45ff9?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Image 6",
   },
-  // Add more images as needed
 ];

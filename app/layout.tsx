@@ -1,4 +1,3 @@
-// components/Layout.tsx
 "use client";
 import { AppBar, Toolbar, Container, Button, Box } from "@mui/material";
 import Link from "next/link";
@@ -33,11 +32,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           style={{
             background: `
               linear-gradient(to bottom, rgba(142, 202, 230, 0.3), rgba(33, 158, 188, 0.1), rgba(255, 183, 3, 0.3)),
-              url('/path/to/your/background-image.jpg')`, // Replace with your image path
+              url('/path/to/your/background-image.jpg')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             minHeight: "100vh",
-            // paddingBottom: "60px", // Ensure content is not covered by the AppBar
           }}
         >
           <AppBar
@@ -55,7 +53,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 alignItems: "center",
               }}
             >
-              {/* Left-side links */}
               <Box
                 sx={{
                   transition: "opacity 0.5s ease, transform 0.5s ease",
@@ -93,7 +90,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </Link>
               </Box>
 
-              {/* Center logo with transition */}
               {!isHomePage && (
                 <Image
                   alt='logo'
@@ -107,7 +103,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 />
               )}
 
-              {/* Right-side links */}
               <Box
                 sx={{
                   transition: "opacity 0.5s ease, transform 0.5s ease",

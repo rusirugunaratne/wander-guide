@@ -1,5 +1,3 @@
-// data/destinations.ts
-
 export interface Destination {
   id: number;
   name: string;

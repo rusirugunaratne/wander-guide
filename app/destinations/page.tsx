@@ -1,5 +1,3 @@
-// pages/destinations.tsx
-
 import { Grid, Typography } from "@mui/material";
 import DestinationCard from "../components/DestinationCard";
 import { destinations } from "../data/destinations";

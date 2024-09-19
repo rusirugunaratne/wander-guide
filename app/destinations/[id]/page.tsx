@@ -1,4 +1,3 @@
-// pages/destinations/[id].tsx
 import {
   Typography,
   List,
@@ -42,7 +41,7 @@ export default function DestinationDetail({ params }: Props) {
             variant='outlined'
             sx={{
               "&:hover": {
-                backgroundColor: colors.homeButton, // Change to desired hover color
+                backgroundColor: colors.homeButton,
                 color: "white",
                 transition: "background-color 0.3s ease",
               },

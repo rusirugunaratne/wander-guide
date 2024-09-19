@@ -1,4 +1,3 @@
-// pages/contact.tsx
 "use client";
 
 import { useState } from "react";
@@ -14,11 +13,7 @@ const Contact = () => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-
-    // Simulating form submission
     console.log("Contact Form Submitted", { name, email, message });
-
-    // Reset the form fields
     setName("");
     setEmail("");
     setMessage("");
@@ -44,7 +39,6 @@ const Contact = () => {
         the form below, and we will get back to you soon.
       </Typography>
 
-      {/* Contact Form */}
       <Box
         component='form'
         onSubmit={handleSubmit}
@@ -55,7 +49,6 @@ const Contact = () => {
           width: "100%",
         }}
       >
-        {/* Name Field */}
         <TextField
           label='Name'
           variant='outlined'
@@ -65,7 +58,6 @@ const Contact = () => {
           onChange={(e) => setName(e.target.value)}
         />
 
-        {/* Email Field */}
         <TextField
           label='Email'
           variant='outlined'
@@ -76,7 +68,6 @@ const Contact = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        {/* Message Field */}
         <TextField
           label='Message'
           variant='outlined'
@@ -88,7 +79,6 @@ const Contact = () => {
           onChange={(e) => setMessage(e.target.value)}
         />
 
-        {/* Submit Button */}
         <Button
           type='submit'
           sx={{

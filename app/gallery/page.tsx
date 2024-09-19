@@ -1,5 +1,3 @@
-// pages/gallery.tsx
-
 import { ImageList, ImageListItem, Typography, Box } from "@mui/material";
 import { imageData } from "../data/images";
 

@@ -1,5 +1,3 @@
-// pages/index.tsx
-
 import { Button, Stack, Typography } from "@mui/material";
 import logo from "../app/assets/animatedLogo.gif";
 import Image from "next/image";
