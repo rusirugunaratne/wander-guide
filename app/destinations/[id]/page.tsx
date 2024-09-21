@@ -1,13 +1,6 @@
-import {
-  Typography,
-  List,
-  ListItem,
-  Chip,
-  Box,
-  CardMedia,
-} from "@mui/material";
-import { destinations } from "../../data/destinations";
 import { colors } from "@/app/data/colors";
+import { Box, CardMedia, Chip, Typography } from "@mui/material";
+import { destinations } from "../../data/destinations";
 
 interface Props {
   params: { id: string };

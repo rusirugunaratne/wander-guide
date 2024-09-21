@@ -1,4 +1,4 @@
-import { ImageList, ImageListItem, Typography, Box } from "@mui/material";
+import { Box, ImageList, ImageListItem } from "@mui/material";
 import { imageData } from "../data/images";
 
 const Gallery = () => {

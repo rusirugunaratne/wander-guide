@@ -1,10 +1,10 @@
 "use client";
-import { AppBar, Toolbar, Container, Button, Box } from "@mui/material";
+import { AppBar, Box, Button, Container, Toolbar } from "@mui/material";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import logo from "../app/assets/animatedLogo.gif";
-import Image from "next/image";
 import { colors } from "./data/colors";
 
 import { Poppins } from "next/font/google";

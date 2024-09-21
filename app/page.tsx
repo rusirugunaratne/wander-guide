@@ -1,10 +1,10 @@
-import { Button, Stack, Typography } from "@mui/material";
-import logo from "../app/assets/animatedLogo.gif";
-import Image from "next/image";
 import AssistantDirectionIcon from "@mui/icons-material/AssistantDirection";
 import CollectionsBookmarkIcon from "@mui/icons-material/CollectionsBookmark";
-import { colors } from "./data/colors";
+import { Button, Stack, Typography } from "@mui/material";
+import Image from "next/image";
 import Link from "next/link";
+import logo from "../app/assets/animatedLogo.gif";
+import { colors } from "./data/colors";
 
 export default function Home() {
   return (

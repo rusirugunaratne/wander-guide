@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { TextField, Button, Box, Typography } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
+import { Box, Button, TextField, Typography } from "@mui/material";
+import { useState } from "react";
 import { colors } from "../data/colors";
 
 const Contact = () => {
